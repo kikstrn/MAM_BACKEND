@@ -1,0 +1,12 @@
+version: '3.8'
+
+services:
+    mam-api:
+        #Nom du conteneur
+        container_name: mam-backend
+        build: .
+        command: npm run start:prod
+        #Port pour accéder a l'api
+        ports:
+            - 4800:4800
+        restart: unless-stopped
